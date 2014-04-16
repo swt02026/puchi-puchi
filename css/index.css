@@ -1,0 +1,40 @@
+@font-face{
+  font-family:'Ubuntu-R';
+  src:url('fonts/Ubuntu-R.ttf');
+}
+@font-face{
+  font-family:'UbuntuMono-R';
+  src:url('fonts/UbuntuMono-R.ttf');
+}
+@font-face{
+  font-family:'Ubuntu-B';
+  src:url('fonts/Ubuntu-B.ttf');
+}
+body{
+  font-family:'Ubuntu','文泉驛微米黑','Microsoft YaHei','蘭亭黑';
+}
+.well{
+  border:0;
+}
+#main-logo{
+  position:absolute;
+  top:200px;
+  left:300px;
+  font-size:100px;
+  padding:5px;
+  width:50%;
+  text-align:center;
+  transition:2s;
+  -webkit-transform:rotate(-10deg);
+}
+#start-button{
+  position:absolute;
+  top:400px;
+  left:700px;
+  width:100px;
+  height:100px;
+  font-size:30px;
+  border:solid white 5px;
+  padding-top:20px;
+  border-radius:50%;
+}
