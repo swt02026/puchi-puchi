@@ -16,25 +16,30 @@ body{
 .well{
   border:0;
 }
+.page{
+  overflow:hidden;
+}
 #main-logo{
   position:absolute;
-  top:200px;
-  left:300px;
+  top:20%;
+  left:30%;
   font-size:100px;
   padding:5px;
-  width:50%;
   text-align:center;
   transition:2s;
   -webkit-transform:rotate(-10deg);
 }
 #start-button{
   position:absolute;
-  top:400px;
-  left:700px;
+  top:50%;
+  left:55%;
   width:100px;
   height:100px;
   font-size:30px;
   border:solid white 5px;
   padding-top:20px;
   border-radius:50%;
+}
+#second-page{
+  display:none;
 }
