@@ -3,10 +3,7 @@ var click_and_show = function( origin , change ){
     $(change).show();
   });
 }
-var clear_interval = function(){
-  
-}
-var i;
+
 jQuery(function($){
   $('#start-button').click(function(){
     $('#index-page').fadeOut('fast');
@@ -19,10 +16,12 @@ jQuery(function($){
   click_and_show( '#tutorial-banner' , '#setsumei01' );
   click_and_show( '#setsumei01' , '#third-page');
   
-  i=0;
-  $('#setsumei01').click(test = setInterval(function(){
-   $('#time-block')[0].innerHTML = ++i;
-   if(i==10){
-    clearInterval(test);
-   }},1000));
+
+  $('#setsumei01').click(function(){
+    var i=0;
+    test = setInterval(function(){
+      $('#time-block')[0].innerHTML = ++i;
+      if(i==10){clearInterval(test);}
+      },1000)
+  });
 });
