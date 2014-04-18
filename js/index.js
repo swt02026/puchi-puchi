@@ -42,6 +42,5 @@ jQuery(function($){
   /* page three*/
   $('#setsumei01').click( fourty_in_ten );
   $('.restart-fast').click( fourty_in_ten );
-
-
+  $('.explore').click(function(){window.open('','_self').close();}); // explore would close it the app itself
 });
