@@ -16,6 +16,7 @@ var fourty_in_ten = function(){
     $('.time-block')[0].innerHTML = ++i;
     if( i == 10 ){
       if( $('.score-block')[0].innerHTML < 40 ){ $('#first-fail').fadeIn(200); }
+      if( $('.score-block')[0].innerHTML >= 40 ){ $('#first-success').fadeIn(200);}
       clearInterval(test);
     }
   }, 1000 );
@@ -40,6 +41,7 @@ jQuery(function($){
   
   /* page three*/
   $('#setsumei01').click( fourty_in_ten );
-  $('#restart-fast').click( fourty_in_ten );
+  $('.restart-fast').click( fourty_in_ten );
+
 
 });
