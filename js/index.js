@@ -3,6 +3,8 @@ var click_and_show = function( origin , change ){
     $(change).show();
   });
 }
+
+/* the page three*/
 var fourty_in_ten = function(){
   $('.time-block')[0].innerHTML = 0;
   $('.score-block')[0].innerHTML = 0;
@@ -23,6 +25,7 @@ var fourty_in_ten = function(){
   });
 }
 
+/* main function */
 jQuery(function($){
   $('#start-button').click(function(){
     $('#index-page').fadeOut('fast');
@@ -34,9 +37,6 @@ jQuery(function($){
 
   click_and_show( '#tutorial-banner' , '#setsumei01' );
   click_and_show( '#setsumei01' , '#third-page');
-  
-  var i = 0;
-  var clicked = 0;
   
   /* page three*/
   $('#setsumei01').click( fourty_in_ten );
