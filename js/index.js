@@ -1,3 +1,10 @@
+var hide_and_show = function( hider , shower ){
+  $(hider).click(function(){
+    $(this).hide();
+    $(shower).hide();
+  });
+}
+
 var click_and_show = function( origin , change ){
   $(origin).click(function(){
     $(change).show();
@@ -38,7 +45,12 @@ jQuery(function($){
 
   click_and_show( '#tutorial-banner' , '#setsumei01' );
   click_and_show( '#setsumei01' , '#third-page');
+  click_and_show( '#to_page4' , '#fourth-page' );
   
+  $('#to_page4').click(function(){
+    $('#third-page').remove();
+    $('#fourth-page').show();
+  });
   /* page three*/
   $('#setsumei01').click( fourty_in_ten );
   $('.restart-fast').click( fourty_in_ten );
