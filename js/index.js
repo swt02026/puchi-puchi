@@ -32,14 +32,12 @@ var fourty_in_ten = function(){
   });
 }
 
-var random_in_ten = function(n){
+var random_in_ten = function(){
   var the_top = Math.floor(Math.random()*(100-0));
   var the_left = Math.floor(Math.random()*(100-0));
   $('#mov-button').css('top', the_top+'%');
   $('#mov-button').css('left', the_left+'%');
-  if( n < 10 ){
-    setTimeout( random_in_ten(++n) , 1000 );
-  }
+  setTimeout( random_in_ten , 1000 );
 }
 
 /* main function */
@@ -68,5 +66,6 @@ jQuery(function($){
   $('.explore').click(function(){window.open('','_self').close();}); // explore would close it the app itself
 
   /*page five*/
-  $('#setsumei02').click(random_in_ten(0)); 
+  $('#setsumei02').click(random_in_ten);
+  $('#mov-button').click(function(){$('.score-block')[0].innerHTML++;});
 });
