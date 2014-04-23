@@ -33,12 +33,26 @@ var fourty_in_ten = function(){
 }
 
 var random_in_ten = function(){
-  var the_top = Math.floor(Math.random()*(100-0));
-  var the_left = Math.floor(Math.random()*(100-0));
-  $('#mov-button').css('top', the_top+'%');
-  $('#mov-button').css('left', the_left+'%');
-  setTimeout( random_in_ten , 1000 );
+  //var the_top = Math.floor(Math.random()*(100-0));
+  //var the_left = Math.floor(Math.random()*(100-0));
+  //$('#mov-button').css('top', the_top+'%');
+  //$('#mov-button').css('left', the_left+'%');
+  //setTimeout( random_in_ten , 1000 );
+  var i = 0;
+  test = setInterval(function(){
+    $('.time-block')[0].innerHTML = ++i;
+	var the_top = Math.floor(Math.random()*(100-0));
+  	var the_left = Math.floor(Math.random()*(100-0));
+  	$('#mov-button').css('top', the_top+'%');
+  	$('#mov-button').css('left', the_left+'%');
+
+    if( i == 20 ){
+      clearInterval(test);
+    }
+  }, 1000);
+
 }
+
 
 /* main function */
 jQuery(function($){
