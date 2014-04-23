@@ -46,7 +46,7 @@ var random_in_ten = function(){
   	$('#mov-button').css('top', the_top+'%');
   	$('#mov-button').css('left', the_left+'%');
 
-    if( i == 20 ){
+    if( i >= 20 ){
         clearInterval(test);
     }
   }, 1000);
