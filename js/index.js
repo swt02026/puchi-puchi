@@ -33,12 +33,11 @@ var fourty_in_ten = function(){
 }
 
 var random_in_ten = function(){
-  //var the_top = Math.floor(Math.random()*(100-0));
-  //var the_left = Math.floor(Math.random()*(100-0));
-  //$('#mov-button').css('top', the_top+'%');
-  //$('#mov-button').css('left', the_left+'%');
-  //setTimeout( random_in_ten , 1000 );
+  $('.time-block')[0].innerHTML = 0;
+  $('.score-block')[0].innerHTML = 0;
   var i = 0;
+  var clicked = 0;
+
   test = setInterval(function(){
     $('.time-block')[0].innerHTML = ++i;
   	var the_top = Math.floor(Math.random()*(100-0));
@@ -47,10 +46,12 @@ var random_in_ten = function(){
   	$('#mov-button').css('left', the_left+'%');
 
     if( i >= 20 ){
+        if( $('.score-block')[0].innerHTML < 10 ){ $('#second-fail').fadeIn(200);}
+        if( $('.score-block')[0].innerHTML >= 10 ){ $('#second-success').fadeIn(200);}
         clearInterval(test);
     }
   }, 1000);
-
+  $('#mov-button').click(function(){$('.score-block')[0].innerHTML = ++clicked});
 }
 
 
@@ -69,17 +70,21 @@ jQuery(function($){
   click_and_show( '#to_page4' , '#fourth-page' );
   click_and_show( '#fourth-page' , '#fifth-page' );
   
+  /* page three */
   $('#to_page4').click(function(){
     $('#third-page').remove();
     $('#fourth-page').show();
     $('#setsumei02').fadeIn(800);
   });
-  /* page three*/
   $('#setsumei01').click( fourty_in_ten );
   $('.restart-fast').click( fourty_in_ten );
   $('.explore').click(function(){window.open('','_self').close();}); // explore would close it the app itself
 
   /*page five*/
   $('#setsumei02').click(random_in_ten);
-  $('#mov-button').click(function(){$('.score-block')[0].innerHTML++;});
+  $('.restart-mov').click(random_in_ten);
+  $('#to_real').click(function(){
+    $('#fifth-page').remove();
+    $('#sixth-page').show();
+  });
 });
