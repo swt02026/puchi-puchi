@@ -132,3 +132,12 @@ body{
   top:40%;
   left:48.5%;
 }
+.circle{
+  height:100px;
+  width:100px;
+  border:solid white 5px;
+  background:grey;
+  border-radius:50%;
+  position:absolute;
+  left:45%;
+}
