@@ -37,7 +37,7 @@ var fourty_in_ten = function(){
   }, 1000 );
 
   $('#fast-button').click(function(){
-    $('.score-block')[0].innerHTML = clicked++;
+    $('.score-block')[0].innerHTML = ++clicked;
     clicked = $('.score-block')[0].innerHTML;
   });
 }
@@ -61,7 +61,7 @@ var random_in_ten = function(){
     }
   }, 1000);
   $('#mov-button').click(function(){
-      $('.score-block')[0].innerHTML = clicked++;
+      $('.score-block')[0].innerHTML = ++clicked;
       clicked = parseInt($('.score-block')[0].innerHTML);
   });
 }
