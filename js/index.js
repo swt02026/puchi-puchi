@@ -26,7 +26,7 @@ var fourty_in_ten = function(){
   $('.score-block')[0].innerHTML = 0;
 
   var i = 0;
-
+  var clicked = 0;
   test = setInterval(function(){
     $('.time-block')[0].innerHTML = ++i;
     if( i == 10 ){
@@ -38,7 +38,7 @@ var fourty_in_ten = function(){
 
   $('#fast-button').click(function(){
     $('.score-block')[0].innerHTML = clicked++;
-    clicked = parseInt($('.score-block')[0].innerHTML);
+    clicked = $('.score-block')[0].innerHTML;
   });
 }
 
@@ -52,7 +52,7 @@ var random_in_ten = function(){
   	var the_top = Math.floor(Math.random()*(100-0));
   	var the_left = Math.floor(Math.random()*(100-0));
   	$('#mov-button').css('top', the_top+'%');
-  	$('#mov-button').css('left, the_left+'%');
+  	$('#mov-button').css('left', the_left+'%');
 
     if( i >= 20 ){
         if( $('.score-block')[0].innerHTML < 10 ){ $('#second-fail').fadeIn(200);}
