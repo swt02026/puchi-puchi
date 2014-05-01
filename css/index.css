@@ -140,4 +140,12 @@ body{
   border-radius:50%;
   position:absolute;
   left:45%;
+  -webkit-transition:2s ease-in-out;
+}
+
+/* circle animation */
+.circle-to-second{
+  position:absolute;
+  top:20%;
+  left:45%;
 }
