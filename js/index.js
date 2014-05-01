@@ -65,9 +65,15 @@ var random_in_ten = function(){
 
 /* main function */
 jQuery(function($){
+  var progress= document.cookie;
+	
   $('#start-button').click(function(){
     $('#index-page').fadeOut('fast');
-    $('#second-page').fadeIn(3000);
+    
+  if(progress==undefined)
+    $('#second-page').fadeIn(2000);
+  else 
+    $('#progress-list').fadeIn(1000);    
   });
   $('.banner').click(function(){$(this).fadeOut(800);});
 
@@ -87,4 +93,5 @@ jQuery(function($){
   $('#setsumei02').click(random_in_ten);
   $('.restart-mov').click(random_in_ten);
   remove_and_show( '#to_real' , '#fifth-page' , '#progress-list');
+
 });
