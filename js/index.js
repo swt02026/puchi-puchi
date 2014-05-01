@@ -28,7 +28,7 @@ var fourty_in_ten = function(){
   var i = 0;
   test = setInterval(function(){
     $('.time-block')[0].innerHTML = ++i;
-    if( i == 10 ){
+    if( i >= 10 ){
       if( $('.score-block')[0].innerHTML < 40 ){ $('#first-fail').fadeIn(200); }
       if( $('.score-block')[0].innerHTML >= 40 ){ $('#first-success').fadeIn(200);}
       clearInterval(test);
@@ -45,10 +45,9 @@ var random_in_ten = function(){
   $('.score-block')[0].innerHTML = 0;
   var i = 0;
   test = setInterval(function(){
-    $('.time-block')[0].innerHTML=i++;
+    $('.time-block')[0].innerHTML=++i;
   	var the_top = Math.floor(Math.random()*(80-20)+20);
   	var the_left = Math.floor(Math.random()*(80-20)+20);
-	console.log(the_top+'\t'+the_left+'\n');
   	$('#mov-button').css('top', the_top+'%');
   	$('#mov-button').css('left', the_left+'%');
 
