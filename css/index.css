@@ -44,6 +44,22 @@ body{
   padding-top:20px;
   border-radius:50%;
 }
+#tool{
+  font-size:35px;
+  position:absolute;
+  top:60%;
+  left:30%;
+}
+#tool-control{
+  display:none;
+  font-size:20px;
+  position:absolute;
+  top:54%;
+  left:30%;
+}
+#tool-control i{
+  margin: 0 10px;
+}
 .banner{
   position:absolute;
   width:100%;
@@ -140,7 +156,7 @@ body{
   border-radius:50%;
   position:absolute;
   left:45%;
-  -webkit-transition:2s ease-in-out;
+  -webkit-transition-duration:2s ease-in-out;
 }
 
 /* circle animation */
