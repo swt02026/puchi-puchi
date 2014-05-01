@@ -26,7 +26,6 @@ var fourty_in_ten = function(){
   $('.score-block')[0].innerHTML = 0;
 
   var i = 0;
-  var clicked = 0;
   test = setInterval(function(){
     $('.time-block')[0].innerHTML = ++i;
     if( i == 10 ){
@@ -45,11 +44,10 @@ var random_in_ten = function(){
   $('.time-block')[0].innerHTML = 0;
   $('.score-block')[0].innerHTML = 0;
   var i = 0;
-  var clicked = 0;
   test = setInterval(function(){
     $('.time-block')[0].innerHTML=i++;
-  	var the_top = Math.floor(Math.random()*(100-0));
-  	var the_left = Math.floor(Math.random()*(100-0));
+  	var the_top = Math.floor(Math.random()*(80-20));
+  	var the_left = Math.floor(Math.random()*(80-20));
   	$('#mov-button').css('top', the_top+'%');
   	$('#mov-button').css('left', the_left+'%');
 
