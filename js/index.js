@@ -26,10 +26,9 @@ var fourty_in_ten = function(){
   $('.score-block')[0].innerHTML = 0;
 
   var i = 0;
-  var clicked = 0;
   test = setInterval(function(){
     $('.time-block')[0].innerHTML = ++i;
-    if( i == 10 ){
+    if( i >= 10 ){
       if( $('.score-block')[0].innerHTML < 40 ){ $('#first-fail').fadeIn(200); }
       if( $('.score-block')[0].innerHTML >= 40 ){ $('#first-success').fadeIn(200);}
       clearInterval(test);
@@ -45,11 +44,10 @@ var random_in_ten = function(){
   $('.time-block')[0].innerHTML = 0;
   $('.score-block')[0].innerHTML = 0;
   var i = 0;
-  var clicked = 0;
   test = setInterval(function(){
-    $('.time-block')[0].innerHTML=i++;
-  	var the_top = Math.floor(Math.random()*(100-0));
-  	var the_left = Math.floor(Math.random()*(100-0));
+    $('.time-block')[0].innerHTML=++i;
+  	var the_top = Math.floor(Math.random()*(80-20)+20);
+  	var the_left = Math.floor(Math.random()*(80-20)+20);
   	$('#mov-button').css('top', the_top+'%');
   	$('#mov-button').css('left', the_left+'%');
 
@@ -67,9 +65,17 @@ var random_in_ten = function(){
 
 /* main function */
 jQuery(function($){
+var progress = localStorage.getItem('progress');
   $('#start-button').click(function(){
     $('#index-page').fadeOut('fast');
-    $('#second-page').fadeIn(3000);
+    
+  if(progress==undefined || progress==null)
+    {
+	localStorage.setItem('progress',0);
+	$('#second-page').fadeIn(2000);
+    }
+  else 
+    $('#progress-list').fadeIn(1000);    
   });
   $('.banner').click(function(){$(this).fadeOut(800);});
 
@@ -89,4 +95,5 @@ jQuery(function($){
   $('#setsumei02').click(random_in_ten);
   $('.restart-mov').click(random_in_ten);
   remove_and_show( '#to_real' , '#fifth-page' , '#progress-list');
+
 });
