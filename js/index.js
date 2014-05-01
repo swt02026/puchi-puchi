@@ -65,12 +65,11 @@ var random_in_ten = function(){
 
 /* main function */
 jQuery(function($){
-  var progress= document.cookie;
-	
+var progress = localStorage.getItem('progress');
   $('#start-button').click(function(){
     $('#index-page').fadeOut('fast');
     
-  if(progress==undefined || progress=="")
+  if(progress==undefined || progress==null)
     {
 	$('#second-page').fadeIn(2000);
 	document.cookie = 0;
