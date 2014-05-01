@@ -72,7 +72,7 @@ var progress = localStorage.getItem('progress');
   if(progress==undefined || progress==null)
     {
 	$('#second-page').fadeIn(2000);
-	document.cookie = 0;
+	localStorage.setItem('progress',0);
     }
   else 
     $('#progress-list').fadeIn(1000);    
