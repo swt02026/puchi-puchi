@@ -37,7 +37,8 @@ var fourty_in_ten = function(){
   }, 1000 );
 
   $('#fast-button').click(function(){
-    $('.score-block')[0].innerHTML  ++;
+    $('.score-block')[0].innerHTML = clicked++;
+    clicked = parseInt($('.score-block')[0].innerHTML);
   });
 }
 
@@ -45,7 +46,7 @@ var random_in_ten = function(){
   $('.time-block')[0].innerHTML = 0;
   $('.score-block')[0].innerHTML = 0;
   var i = 0;
-
+  var clicked = 0;
   test = setInterval(function(){
     $('.time-block')[0].innerHTML=i++;
   	var the_top = Math.floor(Math.random()*(100-0));
@@ -59,7 +60,10 @@ var random_in_ten = function(){
         clearInterval(test);
     }
   }, 1000);
-  $('#mov-button').click(function(){$('.score-block')[0].innerHTML ++});
+  $('#mov-button').click(function(){
+      $('.score-block')[0].innerHTML = clicked++;
+      clicked = parseInt($('.score-block')[0].innerHTML);
+  });
 }
 
 
