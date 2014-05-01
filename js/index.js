@@ -70,7 +70,7 @@ jQuery(function($){
   $('#start-button').click(function(){
     $('#index-page').fadeOut('fast');
     
-  if(progress==undefined or progress=="")
+  if(progress==undefined || progress=="")
     $('#second-page').fadeIn(2000);
   else 
     $('#progress-list').fadeIn(1000);    
