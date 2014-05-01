@@ -69,10 +69,10 @@ var progress = localStorage.getItem('progress');
   $('#start-button').click(function(){
     $('#index-page').fadeOut('fast');
     
+  localStorage.setItem('progress',0);
   if(progress==undefined || progress==null)
     {
 	$('#second-page').fadeIn(2000);
-	localStorage.setItem('progress',0);
     }
   else 
     $('#progress-list').fadeIn(1000);    
