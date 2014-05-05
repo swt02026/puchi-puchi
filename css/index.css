@@ -148,6 +148,8 @@ body{
   top:40%;
   left:48.5%;
 }
+
+/* progress page */
 .circle{
   height:100px;
   width:100px;
@@ -176,6 +178,9 @@ body{
 }
 #end-circle{
   top:65%;
+}
+.line-between-circle{
+  border-left:solid  5px white;
 }
 
 /* circle animation */
