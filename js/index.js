@@ -15,11 +15,17 @@ var remove_and_show = function( remover , remove_target , shower ){
 }
 
 var click_and_show = function( origin , change ){
-  $(origin).click(function(){
-    $(change).show();
-  });
+  $(origin).click(function(){ $(change).show(); });
 }
 
+var tool_click_event = function( tool , tool_control , flag ){
+  if( flag == 0 ){
+    $(tool).click(function(){$(tool_control).show();});
+  }
+  else if( flag == 1 ){
+    $(tool).click(function(){$(tool_control).hide();});
+  }
+}
 /* the page three*/
 var fourty_in_ten = function(){
   $('.time-block')[0].innerHTML = 0;
@@ -52,14 +58,12 @@ var random_in_ten = function(){
   	$('#mov-button').css('left', the_left+'%');
 
     if( i >= 20 ){
-        if( $('.score-block')[0].innerHTML < 10 ){ $('#second-fail').fadeIn(200);}
-        if( $('.score-block')[0].innerHTML >= 10 ){ $('#second-success').fadeIn(200);}
-        clearInterval(test);
+      if( $('.score-block')[0].innerHTML < 10 ){ $('#second-fail').fadeIn(200);}
+      if( $('.score-block')[0].innerHTML >= 10 ){ $('#second-success').fadeIn(200);}
+      clearInterval(test);
     }
   }, 1000);
-  $('#mov-button').click(function(){
-      $('.score-block')[0].innerHTML ++;
-  });
+  $('#mov-button').click(function(){ $('.score-block')[0].innerHTML ++;});
 }
 
 
@@ -69,14 +73,16 @@ var progress = localStorage.getItem('progress');
   $('#start-button').click(function(){
     $('#index-page').fadeOut('fast');
     
-  if(progress==undefined || progress==null)
-    {
-	localStorage.setItem('progress',0);
-	$('#second-page').fadeIn(2000);
+  if(progress==undefined || progress==null){
+	  localStorage.setItem('progress',0);
+	  $('#second-page').fadeIn(2000);
     }
-  else 
-    $('#progress-list').fadeIn(1000);    
+  else{ $('#progress-list').fadeIn(1000);}
   });
+
+  if( $('#tool-control').css('display') == 'none'){ tool_click_event( '#tool' , '#tool-control' , 0 );}
+  if( $('#tool-control').css('display') == 'block' ){ tool_click_event( '#tool' , '#tool-control' , 1 );}
+
   $('.banner').click(function(){$(this).fadeOut(800);});
 
   click_and_show( '#tutorial-banner' , '#setsumei01' );
@@ -95,5 +101,4 @@ var progress = localStorage.getItem('progress');
   $('#setsumei02').click(random_in_ten);
   $('.restart-mov').click(random_in_ten);
   remove_and_show( '#to_real' , '#fifth-page' , '#progress-list');
-
 });
