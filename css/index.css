@@ -156,7 +156,26 @@ body{
   border-radius:50%;
   position:absolute;
   left:45%;
-  -webkit-transition-duration:2s ease-in-out;
+  text-align:center;
+  font-size:17px;
+  vertical-align:middle;
+  color:white;
+  font-weight:bold;
+}
+.circle p{
+  margin-top:30px;
+}
+.activate{
+  background:rgba(255,0,0,0.7);
+}
+#first-circle{
+  top:25%;
+}
+#second-circle{
+  top:45%;
+}
+#end-circle{
+  top:65%;
 }
 
 /* circle animation */
