@@ -18,9 +18,12 @@ var click_and_show = function( origin , change ){
   $(origin).click(function(){ $(change).show(); });
 }
 
-var tool_click_event = function( tool_control ){
-  if($(tool_control).css('display') == 'none'){$(tool_control).show();}
-  if($(tool_control).css('display') == 'block'){$(tool_control).hide();}
+var tool_click_event = function(){
+  if($('#tool-control').css('display') == 'none'){
+    $('#tool-control').show();
+  }else if($('#tool-control').css('display') == 'block'){
+    $('#tool-control').hide();
+  }
 }
 
 /* the page three*/
@@ -77,7 +80,7 @@ jQuery(function($){
     else{ $('#progress-list').fadeIn(1000);}
   });
 
-  $('#tool').click( tool_click_event('#tool-control') );
+  $('#tool').click( tool_click_event );
 
   $('.banner').click(function(){$(this).fadeOut(800);});
 
