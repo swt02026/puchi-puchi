@@ -18,14 +18,11 @@ var click_and_show = function( origin , change ){
   $(origin).click(function(){ $(change).show(); });
 }
 
-var tool_click_event = function( tool , tool_control , flag ){
-  if( flag == 0 ){
-    $(tool).click(function(){$(tool_control).show();});
-  }
-  else if( flag == 1 ){
-    $(tool).click(function(){$(tool_control).hide();});
-  }
+var tool_click_event = function( tool_control ){
+  if($(tool_control).css('display') == 'none'){$(tool_control).show();}
+  if($(tool_control).css('display') == 'block'){$(tool_control).hide();}
 }
+
 /* the page three*/
 var fourty_in_ten = function(){
   $('.time-block')[0].innerHTML = 0;
@@ -69,19 +66,18 @@ var random_in_ten = function(){
 
 /* main function */
 jQuery(function($){
-var progress = localStorage.getItem('progress');
+  var progress = localStorage.getItem('progress');
   $('#start-button').click(function(){
     $('#index-page').fadeOut('fast');
     
-  if(progress==undefined || progress==null){
-	  localStorage.setItem('progress',0);
-	  $('#second-page').fadeIn(2000);
-    }
-  else{ $('#progress-list').fadeIn(1000);}
+    if(progress == undefined || progress == null){
+	    localStorage.setItem('progress',0);
+	    $('#second-page').fadeIn(2000);
+      }
+    else{ $('#progress-list').fadeIn(1000);}
   });
 
-  if( $('#tool-control').css('display') == 'none'){ tool_click_event( '#tool' , '#tool-control' , 0 );}
-  if( $('#tool-control').css('display') == 'block' ){ tool_click_event( '#tool' , '#tool-control' , 1 );}
+  $('#tool').click( tool_click_event('#tool-control') );
 
   $('.banner').click(function(){$(this).fadeOut(800);});
 
