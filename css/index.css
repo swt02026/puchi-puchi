@@ -150,17 +150,19 @@ body{
 }
 
 /* progress page */
+#progress-list{
+  text-align:center;
+}
 .circle{
   height:100px;
   width:100px;
   border:solid white 5px;
   background:grey;
   border-radius:50%;
-  position:absolute;
-  left:45%;
+  display:inline-block;
+  position:relative;
   text-align:center;
   font-size:17px;
-  vertical-align:middle;
   color:white;
   font-weight:bold;
 }
@@ -169,23 +171,4 @@ body{
 }
 .activate{
   background:rgba(255,0,0,0.7);
-}
-#first-circle{
-  top:25%;
-}
-#second-circle{
-  top:45%;
-}
-#end-circle{
-  top:65%;
-}
-.line-between-circle{
-  border-left:solid  5px white;
-}
-
-/* circle animation */
-.circle-to-second{
-  position:absolute;
-  top:20%;
-  left:45%;
 }
