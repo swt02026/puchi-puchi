@@ -172,3 +172,13 @@ body{
 .activate{
   background:rgba(255,0,0,0.7);
 }
+
+/* first stage */
+#first-button{
+  height:200px;
+  width:200px;
+  border-radius:50%;
+  border:solid white 5px;
+  position:absolute;
+}
+

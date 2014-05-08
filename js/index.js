@@ -63,7 +63,7 @@ var random_in_ten = function(){
       clearInterval(test);
     }
   }, 1000);
-  $('#mov-button').click(function(){ $('.score-block')[0].innerHTML ++;});
+  $('#mov-button').click(function(){ $('.score-block')[0].innerHTML++;});
 }
 
 
@@ -101,9 +101,9 @@ jQuery(function($){
   $('.restart-mov').click(random_in_ten);
   remove_and_show( '#to_real' , '#fifth-page' , '#progress-list');
 
+  remove_and_show( '#start-circle' , '#third-page' , '#fourth-page');
   $('#start-circle').click(function(){
-	$('#progress-list').fadeOut('fast');
-	$('#fourth-page').fadeIn(2000);
+    $('#progress-list').fadeOut('fast');
   });
   $('#setsumei02').click(random_in_ten);
   $('.restart-mov').click(random_in_ten);
