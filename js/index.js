@@ -106,5 +106,5 @@ jQuery(function($){
 	$('#fourth-page').fadeIn(2000);
   });
   $('#setsumei02').click(random_in_ten);
-  $('.restart-fast').click(random_in_ten);
+  $('.restart-mov').click(random_in_ten);
 });
