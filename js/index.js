@@ -101,10 +101,15 @@ jQuery(function($){
   $('.restart-mov').click(random_in_ten);
   remove_and_show( '#to_real' , '#fifth-page' , '#progress-list');
 
-  remove_and_show( '#start-circle' , '#third-page' , '#fourth-page');
+  $('#first-circle').click(function(){
+    $('#first-stage').fadeIn('slow');
+    $('#progress-list').hide();
+  });
+
+ /* remove_and_show( '#start-circle' , '#third-page' , '#fourth-page');
   $('#start-circle').click(function(){
     $('#progress-list').fadeOut('fast');
   });
   $('#setsumei02').click(random_in_ten);
-  $('.restart-mov').click(random_in_ten);
+  $('.restart-mov').click(random_in_ten);*/
 });

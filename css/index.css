@@ -174,11 +174,26 @@ body{
 }
 
 /* first stage */
+.game-stage{
+  position:absolute;
+  width:70%;
+  height:50%;
+  border:solid black 5px;
+  left:15%;
+  top:10%;
+  border-radius:10px;
+}
 #first-button{
-  height:200px;
-  width:200px;
+  height:150px;
+  width:150px;
   border-radius:50%;
   border:solid white 5px;
   position:absolute;
+  text-align:center;
+  font-size:85px;
+  font-weight:bold;
+  top:65%;
+  left:45%;
 }
+
 
