@@ -49,6 +49,7 @@ body{
   position:absolute;
   top:60%;
   left:30%;
+  cursor:pointer;
 }
 #tool-control{
   display:none;
@@ -59,6 +60,7 @@ body{
 }
 #tool-control i{
   margin: 0 10px;
+  cursor:pointer;
 }
 .banner{
   position:absolute;
@@ -165,6 +167,7 @@ body{
   font-size:17px;
   color:white;
   font-weight:bold;
+  cursor:pointer;
 }
 .circle p{
   margin-top:30px;
