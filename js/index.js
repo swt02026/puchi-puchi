@@ -102,9 +102,10 @@ jQuery(function($){
   remove_and_show( '#to_real' , '#fifth-page' , '#progress-list');
 
   $('#first-circle').click(function(){
-    $('#first-stage').fadeIn('slow');
+    $('#first-stage-setsumei').fadeIn('slow');
     $('#progress-list').hide();
   });
+  remove_and_show( '#first-setsumei' , '#first-stage-setsumei' , '#first-stage' );
 
  /* remove_and_show( '#start-circle' , '#third-page' , '#fourth-page');
   $('#start-circle').click(function(){

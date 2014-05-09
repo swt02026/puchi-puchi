@@ -75,13 +75,31 @@
       <div class='circle unactivate' id='end-circle'><p>最後一關</p></div>
     </div>
 
+    <!-- 第一關 -->
+    <div class='page' id='first-stage-setsumei'>
+      <div class='banner' id='first-setsumei'></div>
+    </div>
     <div class='page' id='first-stage'>
-      <div class='game-stage'>
-      </div>
+      <div class='game-stage'></div>
       <div class='btn btn-danger' id='first-button'>Go</div>
+      <div class='banner success-banner' id='first-stage-success'>
+        <h2>成功</h2>
+        <a href='#'><i class='glyphicon glyphicon-repeat'></i></a>
+        <a href='#'><i class='glyphicon glyphicon-forward' id='to_second_stage'></i></a>
+      </div>
+      <div class='banner fail-banner' id='first-stage-fail'>
+        <h2>失敗</h2>
+        <a href='#'><i class='glyphicon glyphicon-repeat'></i></a>
+        <a href='#'><i class='glyphicon glyphicon-remove explore'></i></a>
+      </div>
     </div>
 
-
+    <!-- 第二關 -->
+    <div class='page' id='second-stage'>
+      <div class='game-stage'></div>
+      <div class='puchi-matrix'>
+      </div>
+    </div>
    <!-- js file over here-->
    <script src='js/jquery.js'></script>
    <script src='js/bootstrap.min.js'></script>
