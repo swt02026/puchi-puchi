@@ -110,6 +110,7 @@ jQuery(function($){
  /* remove_and_show( '#start-circle' , '#third-page' , '#fourth-page');
   $('#start-circle').click(function(){
     $('#progress-list').fadeOut('fast');
+    $('#third-page').fadeOut('fast');
   });
   $('#setsumei02').click(random_in_ten);
   $('.restart-mov').click(random_in_ten);*/
