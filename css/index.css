@@ -198,5 +198,12 @@ body{
   top:65%;
   left:45%;
 }
-
+.tool-stage{
+  left:20%;
+  top:80%;
+}
+.tool-control-stage{
+  top:75%;
+  left:20%;
+}
 
