@@ -44,21 +44,21 @@ body{
   padding-top:20px;
   border-radius:50%;
 }
-#tool{
+.tool{
   font-size:35px;
   position:absolute;
   top:60%;
   left:30%;
   cursor:pointer;
 }
-#tool-control{
+.tool-control{
   display:none;
   font-size:20px;
   position:absolute;
   top:54%;
   left:30%;
 }
-#tool-control i{
+.tool-control i{
   margin: 0 10px;
   cursor:pointer;
 }

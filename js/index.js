@@ -19,10 +19,10 @@ var click_and_show = function( origin , change ){
 }
 
 var tool_click_event = function(){
-  if($('#tool-control').css('display') == 'none'){
-    $('#tool-control').show();
-  }else if($('#tool-control').css('display') == 'block'){
-    $('#tool-control').hide();
+  if($('.tool-control').css('display') == 'none'){
+    $('.tool-control').show();
+  }else if($('.tool-control').css('display') == 'block'){
+    $('.tool-control').hide();
   }
 }
 
@@ -80,7 +80,7 @@ jQuery(function($){
     else{ $('#progress-list').fadeIn(1000);}
   });
 
-  $('#tool').click( tool_click_event );
+  $('.tool').click( tool_click_event );
 
   $('.banner').click(function(){$(this).fadeOut(800);});
 
