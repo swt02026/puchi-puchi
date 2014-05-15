@@ -66,6 +66,12 @@ var random_in_ten = function(){
   $('#mov-button').click(function(){ $('.score-block')[0].innerHTML++;});
 }
 
+var change_page_from_progress = function( clicker , target ){
+  $( clicker ).click(function(){
+    $( target ).fadeIn('slow');
+    $('#progress-list').hide();
+  });  
+}
 
 /* main function */
 jQuery(function($){
@@ -99,19 +105,12 @@ jQuery(function($){
   /*page five*/
   $('#setsumei02').click(random_in_ten);
   $('.restart-mov').click(random_in_ten);
+  
+  /* control functions of progress list */
   remove_and_show( '#to_real' , '#fifth-page' , '#progress-list');
-
-  $('#first-circle').click(function(){
-    $('#first-stage-setsumei').fadeIn('slow');
-    $('#progress-list').hide();
-  });
+  change_page_from_progress( '#first-circle' , '#first-stage-setsumei' );
   remove_and_show( '#first-setsumei' , '#first-stage-setsumei' , '#first-stage' );
+  change_page_from_progress( '#second-circle' , '#second-stage-setsumei');
+  remove_and_show( '#second-setsuemi' , '#second-stage-setsumei', '#second-stage' );
 
- /* remove_and_show( '#start-circle' , '#third-page' , '#fourth-page');
-  $('#start-circle').click(function(){
-    $('#progress-list').fadeOut('fast');
-    $('#third-page').fadeOut('fast');
-  });
-  $('#setsumei02').click(random_in_ten);
-  $('.restart-mov').click(random_in_ten);*/
 });
