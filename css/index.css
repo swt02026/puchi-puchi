@@ -207,4 +207,23 @@ body{
   left:20%;
 }
 /* second stage */
+#second-stage .game-stage{
+  height:30%;
+}
+.puchi-matrix{
+  border:solid 3px black;
+  border-radius:10px;
+  width:15%;
+  position:absolute;
+  top:40%;
+  left:43%;
+  text-align:center;
+}
+.jumping-matrix{
+  height:50px;
+  width:50px;
+  border-radius:50%;
+  border:solid black 3px;
+  display:inline-block;
+}
 
