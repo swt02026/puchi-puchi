@@ -111,9 +111,5 @@ jQuery(function($){
   change_page_from_progress( '#first-circle' , '#first-stage-setsumei' );
   remove_and_show( '#first-setsumei' , '#first-stage-setsumei' , '#first-stage' );
   change_page_from_progress( '#second-circle' , '#second-stage-setsumei');
-  $('#second-setsuemi').click(function(){
-    $(this).parent().remove();
-    $('#second-stage').show();
-  });
-
+  remove_and_show( '#second-setsumei' , '#second-stage-setsumei' , '#second-stage');
 });
