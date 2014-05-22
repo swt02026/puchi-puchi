@@ -208,14 +208,14 @@ body{
 }
 /* second stage */
 #second-stage .game-stage{
-  height:30%;
+  height:40%;
 }
 .puchi-matrix{
   border:solid 3px black;
   border-radius:10px;
   width:15%;
   position:absolute;
-  top:40%;
+  top:53%;
   left:43%;
   text-align:center;
 }
@@ -225,5 +225,6 @@ body{
   border-radius:50%;
   border:solid black 3px;
   display:inline-block;
+  margin-top:5px;
 }
 
