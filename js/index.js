@@ -72,7 +72,7 @@ var change_page_from_progress = function( clicker , target ){
     $('#progress-list').hide();
   });  
 }
-var isfirst = false, oldPosition = 0;
+var isfirst = false, oldPosition = 0,CounterForJumpingMatrix= 0;
 
 var change_jumping_matrix=function()
 {
@@ -83,6 +83,8 @@ var change_jumping_matrix=function()
   	else
 	    $($('.jumping-matrix')[oldPosition]).removeClass('activate');
 	    $($('.jumping-matrix')[oldPosition=newPosition]).addClass('activate');
+	if(CounterForJumpingMatrix++>=20)
+	clearInterval(move);
   },1000);
 }
 /* main function */
@@ -124,6 +126,5 @@ jQuery(function($){
   remove_and_show( '#first-setsumei' , '#first-stage-setsumei' , '#first-stage' );
   change_page_from_progress( '#second-circle' , '#second-stage-setsumei');
   remove_and_show( '#second-setsumei' , '#second-stage-setsumei' , '#second-stage');
-  change_jumping_matrix();
   change_jumping_matrix();
 });
