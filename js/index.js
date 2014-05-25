@@ -72,7 +72,19 @@ var change_page_from_progress = function( clicker , target ){
     $('#progress-list').hide();
   });  
 }
+var isfirst = false, oldPosition = 0;
 
+var change_jumping_matrix=function()
+{
+  move = setInterval(function(){
+	  var newPosition = Math.floor(Math.random()*(8-0)+0);
+  	if(!isfirst)
+	    isfirst = true;
+  	else
+	    $($('.jumping-matrix')[oldPosition]).removeClass('activate');
+	    $($('.jumping-matrix')[oldPosition=newPosition]).addClass('activate');
+  },1000);
+}
 /* main function */
 jQuery(function($){
   var progress = localStorage.getItem('progress');
@@ -112,4 +124,6 @@ jQuery(function($){
   remove_and_show( '#first-setsumei' , '#first-stage-setsumei' , '#first-stage' );
   change_page_from_progress( '#second-circle' , '#second-stage-setsumei');
   remove_and_show( '#second-setsumei' , '#second-stage-setsumei' , '#second-stage');
+  change_jumping_matrix();
+  change_jumping_matrix();
 });
