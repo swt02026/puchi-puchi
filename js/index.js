@@ -74,8 +74,7 @@ var change_page_from_progress = function( clicker , target ){
 }
 var isfirst = false, oldPosition = 0,CounterForJumpingMatrix= 0;
 
-var change_jumping_matrix=function()
-{
+var change_jumping_matrix=function(){
   move = setInterval(function(){
 	  var newPosition = Math.floor(Math.random()*(8-0)+0);
   	if(!isfirst)
@@ -83,8 +82,7 @@ var change_jumping_matrix=function()
   	else
 	    $($('.jumping-matrix')[oldPosition]).removeClass('activate');
 	    $($('.jumping-matrix')[oldPosition=newPosition]).addClass('activate');
-	if(CounterForJumpingMatrix++>=20)
-	clearInterval(move);
+	if(CounterForJumpingMatrix++>=20) clearInterval(move);
   },1000);
 }
 /* main function */
