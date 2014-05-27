@@ -1,0 +1,133 @@
+<!Doctype html>
+<html>
+  <head>
+   <title>Puchi Puchi</title>
+   <meta charset='utf-8'>
+   <link href='css/bootstrap.min.css' rel='stylesheet'>
+   <link href='css/bootstrap-theme.min.css' rel='stylesheet'>
+   <link href='css/index.css' rel='stylesheet'>
+  </head>
+  <body class='well'>
+    <div class='page' id='index-page'>
+      <div id='main-logo'>
+       puchi puchi 
+      </div>
+      <div class='btn btn-success' id='start-button'>
+        Start
+      </div>
+      <i class='glyphicon glyphicon-cog tool'></i>
+      <div class='tool-control'>
+        <i class='glyphicon glyphicon-book tutorial-button'></i>
+        <i class='glyphicon glyphicon-bullhorn sound-control'></i>
+        <i class='glyphicon glyphicon-globe share'></i>
+      </div>
+    </div>
+    <div class='page' id='second-page'>
+      <div class='banner' id='tutorial-banner'>
+        <h2>Tutorial</h2> 
+      </div> 
+      <div class='banner setsumei' id='setsumei01'>
+        <h2>快</h2>
+        <p>請在 10 秒內，點擊按鍵至少 40 次</p>
+      </div>
+    </div>
+    <div class='page' id='third-page'>
+      <div class='block time-block'>0</div>
+      <div class='block score-block'>0</div>
+      <div class='btn btn-danger' id='fast-button'>Go</div>
+      <div class='banner fail-banner' id='first-fail'>
+        <h2>失敗</h2><br>
+          <a href='#'><i class='glyphicon glyphicon-repeat restart-fast'></i></a>
+          <a href='#'><i class='glyphicon glyphicon-remove explore'></i></a>
+      </div>
+      <div class='banner success-banner' id='first-success'>
+        <h2>成功</h2><br>
+        <a href='#'><i class='glyphicon glyphicon-repeat restart-fast'></i></a>
+        <a href='#'><i class='glyphicon glyphicon-forward' id='to_page4'></i></a>
+      </div>
+
+     </div>
+     <div class='page' id='fourth-page'>
+       <div class='banner setsumei' id='setsumei02'>
+        <h2>準</h2>
+        <p>按鍵會自由運動，請在 20 秒內，點到按鍵 10 次</p>
+       </div>
+     </div>
+     <div class='page' id='fifth-page'>
+      <div class='block time-block'>0</div>
+      <div class='block score-block'>0</div>
+      <div class='btn btn-danger' id='mov-button'></div>
+      <div class='banner fail-banner' id='second-fail'>
+        <h2>失敗</h2>
+        <a href='#'><i class='glyphicon glyphicon-repeat restart-mov'></i></a>
+        <a href='#'><i class='glyphicon glyphicon-remove explore'></i></a>
+       </div>
+      <div class='banner success-banner' id='second-success'>
+        <h2>成功</h2>
+        <a href='#'><i class='glyphicon glyphicon-repeat restart-mov'></i></a>
+        <a href='#'><i class='glyphicon glyphicon-forward' id='to_real'></i></a>
+      </div>
+     </div>
+    <div class='page' id='progress-list'>
+      <div class='circle activate' id='start-circle'><p>開始</p></div>
+      <div class='circle unactivate' id='first-circle'><p>第一關</p></div>
+      <div class='circle unactivate' id='second-circle'><p>第二關</p></div>
+      <div class='circle unactivate' id='end-circle'><p>最後一關</p></div>
+    </div>
+
+    <!-- 第一關 -->
+    <div class='page' id='first-stage-setsumei'>
+      <div class='banner' id='first-setsumei'></div>
+    </div>
+    <div class='page' id='first-stage'>
+      <div class='game-stage'></div>
+      <div class='btn btn-danger' id='first-button'>Go</div>
+      <i class='glyphicon glyphicon-cog tool tool-stage'></i>
+      <div class='tool-control tool-control-stage'>
+        <i class='glyphicon glyphicon-book tutorial-button'></i>
+        <i class='glyphicon glyphicon-bullhorn sound-control'></i>
+        <i class='glyphicon glyphicon-globe share'></i>
+      </div>
+      <div class='banner success-banner' id='first-stage-success'>
+        <h2>成功</h2>
+        <a href='#'><i class='glyphicon glyphicon-repeat'></i></a>
+        <a href='#'><i class='glyphicon glyphicon-forward' id='to_second_stage'></i></a>
+      </div>
+      <div class='banner fail-banner' id='first-stage-fail'>
+        <h2>失敗</h2>
+        <a href='#'><i class='glyphicon glyphicon-repeat'></i></a>
+        <a href='#'><i class='glyphicon glyphicon-remove explore'></i></a>
+      </div>
+    </div>
+
+    <!-- 第二關 -->
+    <div class='page' id='second-stage-setsumei'>
+      <div class='banner' id='second-setsumei'></div>
+    </div>
+    <div class='page' id='second-stage'>
+      <div class='game-stage'></div>
+      <i class='glyphicon glyphicon-cog tool tool-stage'></i>
+      <div class='tool-control tool-control-stage'>
+        <i class='glyphicon glyphicon-book tutorial-button'></i>
+        <i class='glyphicon glyphicon-bullhorn sound-control'></i>
+        <i class='glyphicon glyphicon-globe share'></i> 
+      </div>
+      <div class='puchi-matrix'>
+        <div class='jumping-matrix'></div>
+        <div class='jumping-matrix'></div>
+        <div class='jumping-matrix'></div>
+        <div class='jumping-matrix'></div>
+        <div class='jumping-matrix'></div>
+        <div class='jumping-matrix'></div>
+        <div class='jumping-matrix'></div>
+        <div class='jumping-matrix'></div>
+        <div class='jumping-matrix'></div>
+      </div>
+    </div>
+
+   <!-- js file over here-->
+   <script src='js/jquery.js'></script>
+   <script src='js/bootstrap.min.js'></script>
+   <script src='js/index.js'></script>
+  </body>
+</html>
