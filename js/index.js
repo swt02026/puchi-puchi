@@ -1,6 +1,6 @@
 /* use while changing object */
 var hide_and_show = function( hider , shower ){
-  $(hider).vclick(function(){
+  $(hider).click(function(){
     $(this).hide();
     $(shower).show();
   });
@@ -8,17 +8,17 @@ var hide_and_show = function( hider , shower ){
 
 /* use while changing page */
 var remove_and_show = function( remover , remove_target , shower ){
-  $(remover).vclick(function(){
+  $(remover).click(function(){
     $(remove_target).remove();
     $(shower).show();
   });
 }
 
-var vclick_and_show = function( origin , change ){
-  $(origin).vclick(function(){ $(change).show(); });
+var click_and_show = function( origin , change ){
+  $(origin).click(function(){ $(change).show(); });
 }
 
-var tool_vclick_event = function(){
+var tool_click_event = function(){
   if($('.tool-control').css('display') == 'none'){
     $('.tool-control').show();
   }else if($('.tool-control').css('display') == 'block'){
@@ -30,7 +30,10 @@ var tool_vclick_event = function(){
 var fourty_in_ten = function(){
   $('.time-block')[0].innerHTML = 0;
   $('.score-block')[0].innerHTML = 0;
-
+  var j = 0;
+  $('#fast-button').click(function(){
+    $('.score-block')[0].innerHTML = ++j;
+  });
   var i = 0;
   test = setInterval(function(){
     $('.time-block')[0].innerHTML = ++i;
@@ -41,9 +44,6 @@ var fourty_in_ten = function(){
     }
   }, 1000 );
 
-  $('#fast-button').vclick(function(){
-    $('.score-block')[0].innerHTML ++;
-  });
 }
 
 var random_in_ten = function(){
@@ -63,11 +63,11 @@ var random_in_ten = function(){
       clearInterval(test);
     }
   }, 1000);
-  $('#mov-button').vclick(function(){ $('.score-block')[0].innerHTML++;});
+  $('#mov-button').click(function(){ $('.score-block')[0].innerHTML++;});
 }
 
-var change_page_from_progress = function( vclicker , target ){
-  $( vclicker ).click(function(){
+var change_page_from_progress = function( clicker , target ){
+  $( clicker ).click(function(){
     $( target ).fadeIn('slow');
     $('#progress-list').hide();
   });  
@@ -89,7 +89,7 @@ var change_jumping_matrix=function(){
 $(document).on('pageinit', function(event){
 //jQuery(function($){
   var progress = localStorage.getItem('progress');
-  $('#start-button').vclick(function(){
+  $('#start-button').click(function(){
     $('#index-page').fadeOut('fast');
     
     if(progress == undefined || progress == null){
@@ -99,25 +99,25 @@ $(document).on('pageinit', function(event){
     else{ $('#progress-list').fadeIn(1000);}
   });
 
-  $('.tool').vclick( tool_click_event );
+  $('.tool').click( tool_click_event );
 
-  $('.banner').vclick(function(){$(this).fadeOut(800);});
+  $('.banner').click(function(){$(this).fadeOut(800);});
 
-  vclick_and_show( '#tutorial-banner' , '#setsumei01' );
-  vclick_and_show( '#setsumei01' , '#third-page');
-  vclick_and_show( '#to_page4' , '#fourth-page' );
-  vclick_and_show( '#fourth-page' , '#fifth-page' );
+  click_and_show( '#tutorial-banner' , '#setsumei01' );
+  click_and_show( '#setsumei01' , '#third-page');
+  click_and_show( '#to_page4' , '#fourth-page' );
+  click_and_show( '#fourth-page' , '#fifth-page' );
   
   /* page three */
   remove_and_show( '#to_page4' , '#third-page', '#fourth-page' );
   $('#setsumei02').fadeIn(800);
-  $('#setsumei01').vclick( fourty_in_ten );
-  $('.restart-fast').vclick( fourty_in_ten );
-  $('.explore').vclick(function(){window.open('','_self').close();}); // explore would close it the app itself
+  $('#setsumei01').click( fourty_in_ten );
+  $('.restart-fast').click( fourty_in_ten );
+  $('.explore').click(function(){window.open('','_self').close();}); // explore would close it the app itself
 
   /*page five*/
-  $('#setsumei02').vclick(random_in_ten);
-  $('.restart-mov').vclick(random_in_ten);
+  $('#setsumei02').click(random_in_ten);
+  $('.restart-mov').click(random_in_ten);
   
   /* control functions of progress list */
   remove_and_show( '#to_real' , '#fifth-page' , '#progress-list');
