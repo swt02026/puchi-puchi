@@ -96,6 +96,12 @@ $(document).on('pageinit', function(event){
 	    localStorage.setItem('progress',0);
 	    $('#second-page').fadeIn(2000);
       }
+    else if(progress == 1 ){
+        $('#first-stage-setsumei').fadeIn(2000);
+    }
+    else if(progress == 2){
+        $('#second-stage-setsumei').fadeIn(2000);
+    }
     else{ $('#progress-list').fadeIn(1000);}
   });
 
