@@ -48,16 +48,16 @@
   .tool{
     font-size:35px;
     position:absolute;
-    top:58%;
-    left:30%;
+    top:75%;
+    left:20%;
     cursor:pointer;
   }
   .tool-control{
     display:none;
     font-size:20px;
     position:absolute;
-    top:54%;
-    left:30%;
+    top:70%;
+    left:25%;
   }
   .tool-control i{
     margin: 0 10px;
