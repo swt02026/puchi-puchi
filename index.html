@@ -80,7 +80,6 @@
       <div class='circle activate' id='start-circle'><p>開始</p></div>
       <div class='circle unactivate' id='first-circle'><p>第一關</p></div>
       <div class='circle unactivate' id='second-circle'><p>第二關</p></div>
-      <div class='circle unactivate' id='end-circle'><p>最後一關</p></div>
     </div>
 
     <!-- 第一關 -->
@@ -131,6 +130,19 @@
         <div class='jumping-matrix'></div>
         <div class='jumping-matrix'></div>
       </div>
+      <div class='banner success-banner' id='second-stage-success'>
+        <h2>成功</h2>
+        <a href='#'><i class='glyphicon glyphicon-repeat'></i></a>
+        <a href='#'><i class='glyphicon glyphicon-forward' id='to_finish'></i></a>
+      </div>
+      <div class='banner fail-banner' id='second-stage-fail'>
+        <h2>失敗</h2>
+        <a href='#'><i class='glyphicon glyphicon-repeat'></i></a>
+        <a href='#'><i class='glyphicon glyphicon-remove explore'></i></a>
+      </div>
+    </div>
+    <div class='page' id='finish-page'>
+
     </div>
 
    <!-- js file over here-->
