@@ -89,7 +89,8 @@ var change_jumping_matrix=function()
   },1000);
 }
 /* main function */
-jQuery(function($){
+$(document).on('pageinit', '#indexPage',  function(){
+//jQuery(function($){
   $('#bg').play();
   var progress = localStorage.getItem('progress');
   $('#start-button').click(function(){
