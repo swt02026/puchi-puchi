@@ -83,12 +83,12 @@ var change_jumping_matrix=function()
 	    isfirst = true;
   	else
 	    $($('.jumping-matrix')[oldPosition]).removeClass('activate');
-	    $($('.jumping-matrix')[oldPosition=newPosition]).addClass('activate');
+	    $($('.jumping-matrix')[oldPosition = newPosition]).addClass('activate');
 	if(CounterForJumpingMatrix++>=40)
 	    clearInterval(move);
   },1000);
   $($('.jumping-matrix')[oldPosition]).click(function(){
-	console.log(Secondscore++);
+	console.log(++Secondscore);
   });
 }
 
