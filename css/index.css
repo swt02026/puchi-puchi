@@ -240,3 +240,16 @@
     width:242px;
   }
 }
+
+#bomb {
+  height:216px;
+  width:248px;
+}
+
+#buttons {
+  display:block;
+  position:absolute;
+  width:63%;
+  top:23%;
+  left:20%;
+}
