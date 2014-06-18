@@ -161,6 +161,7 @@ jQuery(function($){
   remove_and_show( '#first-setsumei' , '#first-stage-setsumei' , '#first-stage' );
   FirstStage();
   $('.repeat-first-stage').click(FirstStage);
+  remove_and_show('#to-second-stage', '#first-stage' , '#second-stage-setsumei');
   change_page_from_progress( '#second-circle' , '#second-stage-setsumei');
   remove_and_show( '#second-setsumei' , '#second-stage-setsumei' , '#second-stage');
   change_jumping_matrix();
