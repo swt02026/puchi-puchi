@@ -73,7 +73,6 @@ var change_page_from_progress = function( clicker , target ){
   });  
 }
 
-<<<<<<< HEAD
 
 var isfirst = false, oldPosition = 0,CounterForJumpingMatrix= 0;
 var change_jumping_matrix=function()
