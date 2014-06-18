@@ -3,9 +3,17 @@
   <head>
    <title>Puchi Puchi</title>
    <meta charset='utf-8'>
+   <meta name='viewport' content='width=device-width, initial-scale=1'/>
    <link href='css/bootstrap.min.css' rel='stylesheet'>
    <link href='css/bootstrap-theme.min.css' rel='stylesheet'>
    <link href='css/index.css' rel='stylesheet'>
+   <link href='css/jquery.mobile.external-png-1.4.2.min.css' rel='stylesheet'>
+   <link href='css/jquery.mobile.icons-1.4.2.min.css' rel='stylesheet'>
+   <link href='css/jquery.mobile.inline-png-1.4.2.min.css' rel='stylesheet'>
+   <link href='css/jquery.mobile.inline-svg-1.4.2.min.css' rel='stylesheet'>
+   <link href='css/jquery.mobile.structure-1.4.2.min.css' rel='stylesheet'>
+   <link href='css/jquery.mobile.theme-1.4.2.min.css' rel='stylesheet'>
+   <link href='css/jquery.mobile-1.4.2.min.css' rel='stylesheet'>
   </head>
   <body class='well'>
     <div class='page' id='index-page'>
@@ -28,7 +36,7 @@
       </div> 
       <div class='banner setsumei' id='setsumei01'>
         <h2>快</h2>
-        <p>請在 10 秒內，點擊按鍵至少 40 次</p>
+        <p>請在 10 秒內，點擊按鍵至少 10 次</p>
       </div>
     </div>
     <div class='page' id='third-page'>
@@ -72,7 +80,6 @@
       <div class='circle activate' id='start-circle'><p>開始</p></div>
       <div class='circle unactivate' id='first-circle'><p>第一關</p></div>
       <div class='circle unactivate' id='second-circle'><p>第二關</p></div>
-      <div class='circle unactivate' id='end-circle'><p>最後一關</p></div>
     </div>
 
     <!-- 第一關 -->
@@ -123,11 +130,25 @@
         <div class='jumping-matrix'></div>
         <div class='jumping-matrix'></div>
       </div>
+      <div class='banner success-banner' id='second-stage-success'>
+        <h2>成功</h2>
+        <a href='#'><i class='glyphicon glyphicon-repeat'></i></a>
+        <a href='#'><i class='glyphicon glyphicon-forward' id='to_finish'></i></a>
+      </div>
+      <div class='banner fail-banner' id='second-stage-fail'>
+        <h2>失敗</h2>
+        <a href='#'><i class='glyphicon glyphicon-repeat'></i></a>
+        <a href='#'><i class='glyphicon glyphicon-remove explore'></i></a>
+      </div>
+    </div>
+    <div class='page' id='finish-page'>
+
     </div>
 
    <!-- js file over here-->
-   <script src='js/jquery.js'></script>
-   <script src='js/bootstrap.min.js'></script>
+   <script src="js/jquery.js"></script>
    <script src='js/index.js'></script>
+   <script src='js/bootstrap.min.js'></script>
+   <script src='js/jquery.mobile-1.4.2.min.js'></script>
   </body>
 </html>

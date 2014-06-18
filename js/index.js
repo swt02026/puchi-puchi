@@ -30,20 +30,20 @@ var tool_click_event = function(){
 var fourty_in_ten = function(){
   $('.time-block')[0].innerHTML = 0;
   $('.score-block')[0].innerHTML = 0;
-
+  var j = 0;
+  $('#fast-button').click(function(){
+    $('.score-block')[0].innerHTML = ++j;
+  });
   var i = 0;
   test = setInterval(function(){
     $('.time-block')[0].innerHTML = ++i;
     if( i >= 10 ){
-      if( $('.score-block')[0].innerHTML < 40 ){ $('#first-fail').fadeIn(200); }
-      if( $('.score-block')[0].innerHTML >= 40 ){ $('#first-success').fadeIn(200);}
+      if( $('.score-block')[0].innerHTML < 10 ){ $('#first-fail').fadeIn(200); }
+      if( $('.score-block')[0].innerHTML >= 10 ){ $('#first-success').fadeIn(200);}
       clearInterval(test);
     }
   }, 1000 );
 
-  $('#fast-button').click(function(){
-    $('.score-block')[0].innerHTML ++;
-  });
 }
 
 var random_in_ten = function(){
@@ -73,6 +73,7 @@ var change_page_from_progress = function( clicker , target ){
   });  
 }
 
+<<<<<<< HEAD
 
 var isfirst = false, oldPosition = 0,CounterForJumpingMatrix= 0;
 var change_jumping_matrix=function()
@@ -89,7 +90,8 @@ var change_jumping_matrix=function()
   },1000);
 }
 /* main function */
-jQuery(function($){
+$(document).on('pageinit', function(event){
+//jQuery(function($){
   var progress = localStorage.getItem('progress');
   $('#start-button').click(function(){
     $('#index-page').fadeOut('fast');
@@ -98,6 +100,12 @@ jQuery(function($){
 	    localStorage.setItem('progress',0);
 	    $('#second-page').fadeIn(2000);
       }
+    else if(progress == 1 ){
+        $('#first-stage-setsumei').fadeIn(2000);
+    }
+    else if(progress == 2){
+        $('#second-stage-setsumei').fadeIn(2000);
+    }
     else{ $('#progress-list').fadeIn(1000);}
   });
 
