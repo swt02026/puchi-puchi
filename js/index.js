@@ -72,8 +72,9 @@ var change_page_from_progress = function( clicker , target ){
     $('#progress-list').hide();
   });  
 }
-var isfirst = false, oldPosition = 0,CounterForJumpingMatrix= 0;
 
+
+var isfirst = false, oldPosition = 0,CounterForJumpingMatrix= 0;
 var change_jumping_matrix=function()
 {
   move = setInterval(function(){
@@ -84,7 +85,7 @@ var change_jumping_matrix=function()
 	    $($('.jumping-matrix')[oldPosition]).removeClass('activate');
 	    $($('.jumping-matrix')[oldPosition=newPosition]).addClass('activate');
 	if(CounterForJumpingMatrix++>=20)
-	clearInterval(move);
+	    clearInterval(move);
   },1000);
 }
 /* main function */
