@@ -90,9 +90,9 @@ var change_jumping_matrix=function()
 }
 /* main function */
 jQuery(function($){
-  src="./source/0514.mp3"
-  var soundObj = new Media(src,onSuccess,onError);
-  soundObj.play();
+//  src="./source/0514.mp3"
+//  var soundObj = new Media(src,onSuccess,onError);
+//  soundObj.play();
   var progress = localStorage.getItem('progress');
   $('#start-button').click(function(){
     $('#index-page').fadeOut('fast');
