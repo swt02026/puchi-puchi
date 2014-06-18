@@ -93,14 +93,17 @@ var FirstStageCounter = 0,score = 0;
 var FirstStage = function()
 {
   var Image = ['#target_alian',"#target_nothing"];
+  var selectImg = 0;
   moveFirstSatge = setInterval(function(){
-	var selectImg = Math.floor(Math.random()*2);
+	selectImg = Math.floor(Math.random()*2);
 	$(Image[selectImg]).show();
 	$(Image[1-selectImg]).hide();
-	console.log(selectImg);
 	if(FirstStageCounter++>=20)
 		clearInterval(moveFirstSatge);
-  },1000);
+  },2000);
+  $('#first-button').click(function(){
+	console.log(score+=((selectImg==0)-(selectImg==1)));
+  });
 }
 /* main function */
 jQuery(function($){
