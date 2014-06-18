@@ -97,10 +97,8 @@ var FirstStage = function()
   move = setInterval(function(){
 	var selectImg = Math.floor(Math.random()*2);
 	$(Image[selectImg]).show();
-	$(Image[!selectImg]).hide();
+	$(Image[1-selectImg]).hide();
 	console.log(selectImg);
-//	if(selectImg==1)
-		
 	if(FirstStageCounter++>=20)
 		clearInterval(move);
   },1000);
