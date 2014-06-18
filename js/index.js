@@ -89,8 +89,8 @@ var change_jumping_matrix=function()
   },1000);
 }
 /* main function */
-$(document).on('pageinit', function(event){
-//jQuery(function($){
+jQuery(function($){
+  $('#bg').play();
   var progress = localStorage.getItem('progress');
   $('#start-button').click(function(){
     $('#index-page').fadeOut('fast');
