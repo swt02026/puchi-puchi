@@ -92,9 +92,10 @@ var change_jumping_matrix=function()
   });
 }
 
-var FirstStageCounter = 0,score = 0;
+
 var FirstStage = function()
 {
+  var FirstStageCounter = 0,score = 0;
   var Image = ['#target_alian',"#target_nothing"];
   var selectImg = 0;
   moveFirstSatge = setInterval(function(){
@@ -163,6 +164,7 @@ jQuery(function($){
   change_page_from_progress( '#first-circle' , '#first-stage-setsumei' );
   remove_and_show( '#first-setsumei' , '#first-stage-setsumei' , '#first-stage' );
   FirstStage();
+  $('.repeat-first-stage').click(FirstStage);
   change_page_from_progress( '#second-circle' , '#second-stage-setsumei');
   remove_and_show( '#second-setsumei' , '#second-stage-setsumei' , '#second-stage');
   change_jumping_matrix();
