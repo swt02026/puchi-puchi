@@ -92,17 +92,16 @@ var change_jumping_matrix=function()
 var FirstStageCounter = 0,score = 0;
 var FirstStage = function()
 {
-  FirstStageCounter = 0,score = 0;
   var Image = ['#target_alian',"#target_nothing"];
-  move = setInterval(function(){
+  moveFirstSatge = setInterval(function(){
 	var selectImg = Math.floor(Math.random()*2);
 	$(Image[selectImg]).show();
-	$(Image[!selectImg]).hide();
+	$(Image[1-selectImg]).hide();
 	console.log(selectImg);
 //	if(selectImg==1)
 		
 	if(FirstStageCounter++>=20)
-		clearInterval(move);
+		clearInterval(moveFirstSatge);
   },1000);
 }
 /* main function */
