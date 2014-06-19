@@ -87,7 +87,7 @@ var change_jumping_matrix=function()
 	if(CounterForJumpingMatrix++>=40)
 	    clearInterval(move);
   },1000);
-  $($('.jumping-matrix')[oldPosition]).click(function(){
+	$("[class=activate]").click(function(){
 	console.log(Secondscore++);
   });
 }
@@ -102,8 +102,8 @@ var FirstStage = function()
 	selectImg = Math.floor(Math.random()*2);
 	$(Image[selectImg]).show();
 	$(Image[1-selectImg]).hide();
-	if(FirstStageCounter++>=20){
-		if(score>=40)
+	if(FirstStageCounter++>=40){
+		if(score>=10)
 			$('#first-stage-success').fadeIn(200);
 		else
 			
@@ -112,7 +112,7 @@ var FirstStage = function()
 	}	
   },2000);
   $('#first-button').click(function(){
-	if(FirstStageCounter<20)
+	if(FirstStageCounter<40)
 	score+=((selectImg==0)-(selectImg==1));
   });
 }
@@ -164,6 +164,7 @@ jQuery(function($){
   change_page_from_progress( '#first-circle' , '#first-stage-setsumei' );
   remove_and_show( '#first-setsumei' , '#first-stage-setsumei' , '#first-stage' );
   FirstStage();
+  
   $('.repeat-first-stage').click(FirstStage);
   change_page_from_progress( '#second-circle' , '#second-stage-setsumei');
   remove_and_show( '#second-setsumei' , '#second-stage-setsumei' , '#second-stage');
