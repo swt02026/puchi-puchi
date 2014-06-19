@@ -16,5 +16,5 @@
     <author href="https://build.phonegap.com" email="swt02026@gmail.com">
          
     </author>
-    <icon src="./source/index.png" gap:platform="android" gap:density="ldpi" />
+    <icon src="source/index.png" gap:platform="android" gap:density="ldpi" />
 </widget>
