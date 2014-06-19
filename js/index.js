@@ -83,13 +83,15 @@ var change_jumping_matrix=function()
 	    isfirst = true;
   	else
 	    $($('.jumping-matrix')[oldPosition]).removeClass('activate');
+  $($('.jumping-matrix')[oldPosition]).unbind('click');
 	    $($('.jumping-matrix')[oldPosition = newPosition]).addClass('activate');
-	if(CounterForJumpingMatrix++>=40)
-	    clearInterval(move);
-  },1000);
+
   $($('.jumping-matrix')[oldPosition]).click(function(){
 	console.log(++Secondscore);
   });
+	if(CounterForJumpingMatrix++>=40)
+	    clearInterval(move);
+  },1000);
 }
 
 
@@ -102,7 +104,7 @@ var FirstStage = function()
 	selectImg = Math.floor(Math.random()*2);
 	$(Image[selectImg]).show();
 	$(Image[1-selectImg]).hide();
-	if(FirstStageCounter++>=40){
+	if(FirstStageCounter++>=20){
 		if(score>=10)
 			$('#first-stage-success').fadeIn(200);
 		else
@@ -112,7 +114,7 @@ var FirstStage = function()
 	}	
   },2000);
   $('#first-button').click(function(){
-	if(FirstStageCounter<40)
+	if(FirstStageCounter<20)
 	score+=((selectImg==0)-(selectImg==1));
   });
 }
