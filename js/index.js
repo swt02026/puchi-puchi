@@ -98,10 +98,17 @@ var FirstStage = function()
 	selectImg = Math.floor(Math.random()*2);
 	$(Image[selectImg]).show();
 	$(Image[1-selectImg]).hide();
-	if(FirstStageCounter++>=20)
+	if(FirstStageCounter++>=20){
+		if(score>=40)
+			$('#first-stage-success').fadeIn(200);
+		else
+			
+			$('#first-stage-fail').fadeIn(200);
 		clearInterval(moveFirstSatge);
+	}	
   },2000);
   $('#first-button').click(function(){
+	if(FirstStageCounter<20)
 	console.log(score+=((selectImg==0)-(selectImg==1)));
   });
 }
