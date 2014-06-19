@@ -88,10 +88,15 @@ var change_jumping_matrix=function()
     $($('.jumping-matrix')[oldPosition]).unbind('click');
     $($('.jumping-matrix')[oldPosition = newPosition]).addClass('activate');
     $($('.jumping-matrix')[oldPosition]).click(function(){
-	console.log(++Secondscore);
+	++Secondscore
     });
-	if(CounterForJumpingMatrix++>=40)
+	if(CounterForJumpingMatrix++>=40){
+	    if(Secondscore>10)	
+		$('#second-stage-success').fadeIn(200);
+	    else
+		$('#second-stage-fail').fadeIn(200);
 	    clearInterval(move);
+	}
   },1000);
 
 }
