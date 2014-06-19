@@ -88,6 +88,23 @@ var change_jumping_matrix=function()
 	    clearInterval(move);
   },1000);
 }
+
+var FirstStageCounter = 0,score = 0;
+var FirstStage = function()
+{
+  FirstStageCounter = 0,score = 0;
+  var Image = ['#target_alian',"#target_nothing"];
+  move = setInterval(function(){
+	var selectImg = Math.floor(Math.random()*2);
+	$(Image[selectImg]).show();
+	$(Image[!selectImg]).hide();
+	console.log(selectImg);
+//	if(selectImg==1)
+		
+	if(FirstStageCounter++>=20)
+		clearInterval(move);
+  },1000);
+}
 /* main function */
 jQuery(function($){
 //  src="./source/0514.mp3"
@@ -134,6 +151,7 @@ jQuery(function($){
   remove_and_show( '#to_real' , '#fifth-page' , '#progress-list');
   change_page_from_progress( '#first-circle' , '#first-stage-setsumei' );
   remove_and_show( '#first-setsumei' , '#first-stage-setsumei' , '#first-stage' );
+  FirstStage();
   change_page_from_progress( '#second-circle' , '#second-stage-setsumei');
   remove_and_show( '#second-setsumei' , '#second-stage-setsumei' , '#second-stage');
   change_jumping_matrix();
