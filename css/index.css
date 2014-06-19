@@ -228,4 +228,13 @@
     display:inline-block;
     margin-top:5px;
   }
+  #target_nothing{
+    height:232px;
+    width:216px;
+    display:none;
+  }
+  #target_alian{
+    height:232px;
+    width:216px;
+  }
 }
