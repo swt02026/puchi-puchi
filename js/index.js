@@ -83,12 +83,12 @@ var change_jumping_matrix=function()
 	    isfirst = true;
   	else
 	    $($('.jumping-matrix')[oldPosition]).removeClass('activate');
-	    $($('.jumping-matrix')[oldPosition=newPosition]).addClass('activate');
+	    $($('.jumping-matrix')[oldPosition = newPosition]).addClass('activate');
 	if(CounterForJumpingMatrix++>=40)
 	    clearInterval(move);
   },1000);
-	$("[class=activate]").click(function(){
-	console.log(Secondscore++);
+  $($('.jumping-matrix')[oldPosition]).click(function(){
+	console.log(++Secondscore);
   });
 }
 
@@ -166,6 +166,7 @@ jQuery(function($){
   FirstStage();
   
   $('.repeat-first-stage').click(FirstStage);
+  remove_and_show('#to-second-stage', '#first-stage' , '#second-stage-setsumei');
   change_page_from_progress( '#second-circle' , '#second-stage-setsumei');
   remove_and_show( '#second-setsumei' , '#second-stage-setsumei' , '#second-stage');
   change_jumping_matrix();
