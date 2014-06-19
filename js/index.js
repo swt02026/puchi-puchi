@@ -98,8 +98,6 @@ var FirstStage = function()
 	$(Image[selectImg]).show();
 	$(Image[1-selectImg]).hide();
 	console.log(selectImg);
-//	if(selectImg==1)
-		
 	if(FirstStageCounter++>=20)
 		clearInterval(moveFirstSatge);
   },1000);

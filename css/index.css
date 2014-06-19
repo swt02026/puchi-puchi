@@ -194,10 +194,12 @@
     border:solid white 5px;
     position:absolute;
     text-align:center;
-    font-size:50px;
+    font-size:39px;
     font-weight:bold;
     top:65%;
     left:37%;
+    padding-top:16px;
+    padding-left:11px;
   }
   .tool-stage{
     left:10%;
